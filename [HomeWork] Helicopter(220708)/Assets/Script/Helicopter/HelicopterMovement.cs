@@ -62,7 +62,6 @@ public class HelicopterMovement : MonoBehaviour
 
         MainPropeller.transform.Rotate(0f, CurrentPropellerSpeed, 0f);
         TailPropeller.transform.Rotate(CurrentPropellerSpeed, 0f, 0f);
-
     }
 
     private void EngineOn()

@@ -9,11 +9,13 @@ public class Missile : MonoBehaviour
 
     private float currentLifeTime;
     private Rigidbody rigid;
+    private Vector3 originalPos;
 
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         rigid = GetComponent<Rigidbody>();
+        originalPos = transform.position;
         rigid.velocity = gameObject.transform.forward * Speed * -1;
         currentLifeTime = 0f;
     }
@@ -27,7 +29,7 @@ public class Missile : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 
@@ -36,10 +38,16 @@ public class Missile : MonoBehaviour
         Debug.Log(collision.gameObject.layer);
         if(collision.gameObject.layer != 6)
         {
-            Destroy(gameObject);
+            Die();
             if(collision.gameObject.name != "Plane")
                 collision.gameObject.SetActive(false);
         }
+    }
+
+    private void Die()
+    {
+        gameObject.SetActive(false);
+        gameObject.transform.position = originalPos;
     }
 
 }

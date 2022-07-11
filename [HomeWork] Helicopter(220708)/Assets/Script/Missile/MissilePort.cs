@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class MissilePort : MonoBehaviour
 {
-    public Transform[] Ports;
-    public GameObject MissilePraf;
+    public GameObject[] PortsA;
+    public GameObject[] PortsB;
     public float FireRate = 1f;
 
     private HelicopterInput input;
     private float fireTime = 0f;
     private int portTurn = 0;
+    private int[] missilesTurn = { 0, 0 };
     private bool isFired = false;
     private bool isStarted = false;
 
@@ -52,7 +53,19 @@ public class MissilePort : MonoBehaviour
         isFired = true;
 
         ++portTurn;
-        portTurn = portTurn % Ports.Length;
-        GameObject missile = Instantiate(MissilePraf, Ports[portTurn].position, gameObject.transform.rotation);
+        portTurn = portTurn % 2;
+
+        if (portTurn == 0)
+            MissileActive(portTurn, ref PortsA);
+        else
+            MissileActive(portTurn, ref PortsB);
+    }
+
+    void MissileActive(int turn, ref GameObject[] Port)
+    {
+        ++missilesTurn[turn];
+        missilesTurn[turn] = missilesTurn[turn] % Port.Length;
+
+        Port[missilesTurn[turn]].gameObject.SetActive(true);
     }
 }
