@@ -8,6 +8,7 @@ public class HelicopterMovement : MonoBehaviour
     private float CurrentPropellerSpeed;
 
     public float TurnSpeed;
+    public float MoveSpeed;
     public float AccelerateSpeed;
 
     public GameObject MainPropeller;
@@ -17,6 +18,7 @@ public class HelicopterMovement : MonoBehaviour
     private Rigidbody rigid;
     private bool isEngineOn = false;
     private float turn;
+    private float move;
     private float accelerate;
 
     // Start is called before the first frame update
@@ -33,15 +35,17 @@ public class HelicopterMovement : MonoBehaviour
         if (input.R)
         {
             isEngineOn = !isEngineOn;
-            Debug.Log($"{isEngineOn}");
         }
 
         if(CurrentPropellerSpeed >= MaxPropellerSpeed && isEngineOn)
         {
             turn = TurnSpeed * input.X;
+            move = MoveSpeed * input.Z * -1;
             accelerate = AccelerateSpeed * input.Y;
+            Debug.Log($"{turn}, {move}, {accelerate}");
 
             gameObject.transform.Rotate(0f, turn, 0f);
+            rigid.velocity = gameObject.transform.forward * move;
             rigid.AddForce(0f, accelerate, 0f);
         }
         else
