@@ -5,6 +5,7 @@ using UnityEngine;
 public class HelicopterInput : MonoBehaviour
 {
     public bool R { get; private set; }
+    public bool F { get; private set; }
 
     public float X { get; private set; }
     public float Y { get; private set;}
@@ -13,10 +14,12 @@ public class HelicopterInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        R = false;
+        R = F = false;
         X = Y = Z = 0f;
 
         R = Input.GetKeyDown(KeyCode.R);
+        F = Input.GetKeyDown(KeyCode.F);
+
         X = Input.GetAxis("Horizontal");
         Z = Input.GetAxis("Vertical");
 

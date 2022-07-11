@@ -14,7 +14,7 @@ public class Missile : MonoBehaviour
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
-        rigid.velocity = gameObject.transform.forward * Speed;
+        rigid.velocity = gameObject.transform.forward * Speed * -1;
         currentLifeTime = 0f;
     }
 
@@ -27,21 +27,19 @@ public class Missile : MonoBehaviour
         }
         else
         {
-            Die();
+            Destroy(gameObject);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag != "Helicopter")
+        Debug.Log(collision.gameObject.layer);
+        if(collision.gameObject.layer != 6)
         {
-            Invoke("Die", 3f);
+            Destroy(gameObject);
+            if(collision.gameObject.name != "Plane")
+                collision.gameObject.SetActive(false);
         }
-    }
-
-    void Die()
-    {
-        Destroy(gameObject);
     }
 
 }
