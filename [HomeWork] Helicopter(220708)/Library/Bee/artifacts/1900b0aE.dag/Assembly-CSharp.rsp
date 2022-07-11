@@ -354,6 +354,7 @@
 "Assets/Script/CamaraMove.cs"
 "Assets/Script/Helicopter/HelicopterInput.cs"
 "Assets/Script/Helicopter/HelicopterMovement.cs"
+"Assets/Script/Missile/Missile.cs"
 -langversion:9.0
 
 /deterministic

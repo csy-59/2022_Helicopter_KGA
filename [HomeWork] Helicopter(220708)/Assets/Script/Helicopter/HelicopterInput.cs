@@ -8,15 +8,21 @@ public class HelicopterInput : MonoBehaviour
 
     public float X { get; private set; }
     public float Y { get; private set;}
+    public float Z { get; private set; }
 
     // Update is called once per frame
     void Update()
     {
         R = false;
-        X = Y = 0f;
+        X = Y = Z = 0f;
 
         R = Input.GetKeyDown(KeyCode.R);
         X = Input.GetAxis("Horizontal");
-        Y = Input.GetAxis("Vertical");
+        Z = Input.GetAxis("Vertical");
+
+        if(Input.GetKey(KeyCode.Q))
+            Y = 1;
+        else if(Input.GetKey(KeyCode.E))
+            Y = -1;
     }
 }
