@@ -18,7 +18,7 @@ public class CamaraMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         float differX = target.transform.position.x - gameObject.transform.position.x;
         float differY = target.transform.position.y - gameObject.transform.position.y;
