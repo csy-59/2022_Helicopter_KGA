@@ -6,7 +6,7 @@ public class Missile : MonoBehaviour
 {
     public float MaxDurationTime;
     public float Speed;
-    public GameObject PortPos;
+    public GameObject Port;
 
     private float currentLifeTime;
     private Rigidbody rigid;
@@ -46,7 +46,7 @@ public class Missile : MonoBehaviour
     private void Die()
     {
         gameObject.SetActive(false);
-        gameObject.transform.position = PortPos.transform.position;
+        gameObject.transform.position = Port.transform.position;
     }
 
 }
