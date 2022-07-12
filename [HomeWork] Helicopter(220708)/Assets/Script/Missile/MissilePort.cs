@@ -13,7 +13,6 @@ public class MissilePort : MonoBehaviour
     private int portTurn = 0;
     private int[] missilesTurn = { 0, 0 };
     private bool isFired = false;
-    private bool isStarted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +23,7 @@ public class MissilePort : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isStarted)
+        if(input.IsStared)
         {
             if (isFired)
             {
@@ -40,11 +39,6 @@ public class MissilePort : MonoBehaviour
             {
                 FireMissile();
             }
-        }
-
-        if(input.R)
-        {
-            isStarted = !isStarted;
         }
     }
 

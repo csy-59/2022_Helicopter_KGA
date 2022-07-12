@@ -16,7 +16,6 @@ public class HelicopterMovement : MonoBehaviour
 
     private HelicopterInput input;
     private Rigidbody rigid;
-    private bool isEngineOn = false;
     private float turn;
     private float move;
     private float accelerate;
@@ -32,17 +31,11 @@ public class HelicopterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (input.R)
-        {
-            isEngineOn = !isEngineOn;
-        }
-
-        if(CurrentPropellerSpeed >= MaxPropellerSpeed && isEngineOn)
+        if(CurrentPropellerSpeed >= MaxPropellerSpeed && input.IsStared)
         {
             turn = TurnSpeed * input.X;
             move = MoveSpeed * input.Z * -1;
             accelerate = AccelerateSpeed * input.Y;
-            Debug.Log($"{turn}, {move}, {accelerate}");
 
             gameObject.transform.Rotate(0f, turn, 0f);
             rigid.velocity = gameObject.transform.forward * move;
@@ -50,7 +43,7 @@ public class HelicopterMovement : MonoBehaviour
         }
         else
         {
-            if (isEngineOn)
+            if (input.IsStared)
             {
                 EngineOn();
             }

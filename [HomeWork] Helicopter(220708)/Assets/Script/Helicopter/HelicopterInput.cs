@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HelicopterInput : MonoBehaviour
 {
-    public bool R { get; private set; }
+    public bool IsStared { get; private set; }
     public bool F { get; private set; }
 
     public float X { get; private set; }
@@ -14,10 +14,11 @@ public class HelicopterInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        R = F = false;
+        F = false;
         X = Y = Z = 0f;
 
-        R = Input.GetKeyDown(KeyCode.R);
+        if (Input.GetKeyDown(KeyCode.R))
+            IsStared = !IsStared;
         F = Input.GetKeyDown(KeyCode.F);
 
         X = Input.GetAxis("Horizontal");

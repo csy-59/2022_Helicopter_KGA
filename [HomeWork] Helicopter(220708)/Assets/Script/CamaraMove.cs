@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CamaraMove : MonoBehaviour
 {
-    public GameObject target;
+    public GameObject Target;
 
     private Vector3 originalPos;
 
@@ -16,7 +16,7 @@ public class CamaraMove : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        Vector3 differ = target.transform.position - gameObject.transform.position;
+        Vector3 differ = Target.transform.position - gameObject.transform.position;
         gameObject.transform.position = originalPos + gameObject.transform.position + differ;
     }
 }

@@ -6,16 +6,15 @@ public class Missile : MonoBehaviour
 {
     public float MaxDurationTime;
     public float Speed;
+    public GameObject PortPos;
 
     private float currentLifeTime;
     private Rigidbody rigid;
-    private Vector3 originalPos;
 
     // Start is called before the first frame update
     private void OnEnable()
     {
         rigid = GetComponent<Rigidbody>();
-        originalPos = transform.position;
         rigid.velocity = gameObject.transform.forward * Speed * -1;
         currentLifeTime = 0f;
     }
@@ -47,7 +46,7 @@ public class Missile : MonoBehaviour
     private void Die()
     {
         gameObject.SetActive(false);
-        gameObject.transform.position = originalPos;
+        gameObject.transform.position = PortPos.transform.position;
     }
 
 }
