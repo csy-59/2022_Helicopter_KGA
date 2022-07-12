@@ -56,12 +56,12 @@ public class MissilePort : MonoBehaviour
         portTurn = portTurn % 2;
 
         if (portTurn == 0)
-            MissileActive(portTurn, ref PortsA);
+            MissileActive(portTurn, in PortsA);
         else
-            MissileActive(portTurn, ref PortsB);
+            MissileActive(portTurn, in PortsB);
     }
 
-    void MissileActive(int turn, ref GameObject[] Port)
+    void MissileActive(int turn, in GameObject[] Port)
     {
         ++missilesTurn[turn];
         missilesTurn[turn] = missilesTurn[turn] % Port.Length;

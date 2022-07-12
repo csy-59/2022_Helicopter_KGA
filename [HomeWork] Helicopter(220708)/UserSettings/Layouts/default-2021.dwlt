@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 110
+  controlID: 155
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 48
+  controlID: 62
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 93
+  controlID: 154
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 94
+  controlID: 132
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,8 +267,8 @@ MonoBehaviour:
     y: 0
     width: 274
     height: 631
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -319,8 +319,8 @@ MonoBehaviour:
     y: 0
     width: 1334
     height: 469
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -345,8 +345,8 @@ MonoBehaviour:
     y: 469
     width: 1334
     height: 478
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -411,9 +411,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 325b0000
-      m_LastClickedID: 23346
-      m_ExpandedIDs: 34fbffffe4590000185a00008c5a0000325b0000
+      m_SelectedIDs: ac190000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 34fbffffe45900001a5a0000985a0000505b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -519,22 +519,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script/Missile
+    - Assets/Script
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Script/Missile
+  - Assets/Script
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\csy\Unity\2022_Helicopter_KGA\[HomeWork] Helicopter(220708)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e25b0000
-    m_LastClickedID: 23522
-    m_ExpandedIDs: 00000000ce5b0000de5b000000ca9a3b
+    m_SelectedIDs: f85b0000
+    m_LastClickedID: 23544
+    m_ExpandedIDs: 00000000ec5b0000f85b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -562,7 +562,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ce5b0000
+    m_ExpandedIDs: 00000000ec5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -614,7 +614,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 52}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 115
@@ -986,11 +986,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.15725197, y: -0.62457615, z: 0.13007917, w: 0.7539763}
     speed: 2
-    m_Value: {x: 0.14447689, y: -0.6064343, z: 0.11305958, w: 0.77368045}
+    m_Value: {x: 0.15723433, y: -0.6245061, z: 0.13006458, w: 0.7538917}
   m_Size:
     m_Target: 3.1526299
     speed: 2
-    m_Value: 3.0168707
+    m_Value: 3.1526299
   m_Ortho:
     m_Target: 0
     speed: 2
