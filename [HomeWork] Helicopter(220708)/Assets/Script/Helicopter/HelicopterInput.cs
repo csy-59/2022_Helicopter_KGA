@@ -5,7 +5,7 @@ using UnityEngine;
 public class HelicopterInput : MonoBehaviour
 {
     public bool IsStared { get; private set; }
-    public bool F { get; private set; }
+    public bool Fire { get; private set; }
 
     public float X { get; private set; }
     public float Y { get; private set;}
@@ -14,19 +14,15 @@ public class HelicopterInput : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        F = false;
+        Fire = false;
         X = Y = Z = 0f;
 
         if (Input.GetKeyDown(KeyCode.R))
             IsStared = !IsStared;
-        F = Input.GetKeyDown(KeyCode.F);
+        Fire = Input.GetKeyDown(KeyCode.F);
 
         X = Input.GetAxis("Horizontal");
-        Z = Input.GetAxis("Vertical");
-
-        if(Input.GetKey(KeyCode.Q))
-            Y = 1;
-        else if(Input.GetKey(KeyCode.E))
-            Y = -1;
+        Y = Input.GetAxis("Vertical");
+        Z = Input.GetAxis("Forward");
     }
 }

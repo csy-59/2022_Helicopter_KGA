@@ -35,7 +35,7 @@ public class MissilePort : MonoBehaviour
                     isFired = false;
                 }
             }
-            else if (input.F)
+            else if (input.Fire)
             {
                 FireMissile();
             }
