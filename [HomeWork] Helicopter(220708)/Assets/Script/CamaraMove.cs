@@ -14,7 +14,7 @@ public class CamaraMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    private void LateUpdate()
     {
         Vector3 differ = Target.transform.position - gameObject.transform.position;
         gameObject.transform.position = originalPosition + gameObject.transform.position + differ;

@@ -12,7 +12,7 @@ public class HelicopterInput : MonoBehaviour
     public float Z { get; private set; }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         F = false;
         X = Y = Z = 0f;

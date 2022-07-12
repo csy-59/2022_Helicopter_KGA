@@ -1306,6 +1306,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7162235648090395431, guid: fe2f9d4313232e349ad699fd5f711a94, type: 3}
+      propertyPath: Port
+      value: 
+      objectReference: {fileID: 435640373}
+    - target: {fileID: 7162235648090395431, guid: fe2f9d4313232e349ad699fd5f711a94, type: 3}
       propertyPath: PortPos
       value: 
       objectReference: {fileID: 435640373}
@@ -2160,6 +2164,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7162235648090395431, guid: fe2f9d4313232e349ad699fd5f711a94, type: 3}
+      propertyPath: Port
+      value: 
+      objectReference: {fileID: 435640373}
+    - target: {fileID: 7162235648090395431, guid: fe2f9d4313232e349ad699fd5f711a94, type: 3}
       propertyPath: PortPos
       value: 
       objectReference: {fileID: 435640373}
@@ -2396,6 +2404,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7162235648090395431, guid: fe2f9d4313232e349ad699fd5f711a94, type: 3}
+      propertyPath: Port
+      value: 
+      objectReference: {fileID: 214393473}
     - target: {fileID: 7162235648090395431, guid: fe2f9d4313232e349ad699fd5f711a94, type: 3}
       propertyPath: PortPos
       value: 
@@ -2736,6 +2748,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7162235648090395431, guid: fe2f9d4313232e349ad699fd5f711a94, type: 3}
+      propertyPath: Port
+      value: 
+      objectReference: {fileID: 214393473}
     - target: {fileID: 7162235648090395431, guid: fe2f9d4313232e349ad699fd5f711a94, type: 3}
       propertyPath: PortPos
       value: 
@@ -3632,6 +3648,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7162235648090395431, guid: fe2f9d4313232e349ad699fd5f711a94, type: 3}
+      propertyPath: Port
+      value: 
+      objectReference: {fileID: 214393473}
     - target: {fileID: 7162235648090395431, guid: fe2f9d4313232e349ad699fd5f711a94, type: 3}
       propertyPath: PortPos
       value: 

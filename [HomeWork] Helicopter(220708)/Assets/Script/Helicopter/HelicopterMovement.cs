@@ -21,7 +21,7 @@ public class HelicopterMovement : MonoBehaviour
     private float accelerate;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         input = GetComponent<HelicopterInput>();
         rigid = GetComponent<Rigidbody>();
@@ -29,7 +29,7 @@ public class HelicopterMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(CurrentPropellerSpeed >= MaxPropellerSpeed && input.IsStared)
         {

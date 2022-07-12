@@ -15,13 +15,13 @@ public class MissilePort : MonoBehaviour
     private bool isFired = false;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         input = gameObject.GetComponent<HelicopterInput>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(input.IsStared)
         {
@@ -42,7 +42,7 @@ public class MissilePort : MonoBehaviour
         }
     }
 
-    void FireMissile()
+    private void FireMissile()
     {
         isFired = true;
 
@@ -55,7 +55,7 @@ public class MissilePort : MonoBehaviour
             MissileActive(portTurn, in PortsB);
     }
 
-    void MissileActive(int turn, in GameObject[] Port)
+    private void MissileActive(int turn, in GameObject[] Port)
     {
         ++missilesTurn[turn];
         missilesTurn[turn] = missilesTurn[turn] % Port.Length;

@@ -20,7 +20,7 @@ public class Missile : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(currentLifeTime < MaxDurationTime)
         {
@@ -34,7 +34,6 @@ public class Missile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.layer);
         if(collision.gameObject.layer != 6)
         {
             Die();
